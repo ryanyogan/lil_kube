@@ -10,6 +10,10 @@ use Mix.Config
 config :lil_kube,
   ecto_repos: [LilKube.Repo]
 
+config :lil_kube, LilKube.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  pool_size: 10
+
 # Configures the endpoint
 config :lil_kube, LilKubeWeb.Endpoint,
   url: [host: "localhost"],
